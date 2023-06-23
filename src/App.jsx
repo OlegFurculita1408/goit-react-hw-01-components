@@ -1,12 +1,19 @@
-import FriendList from "./components/Friendlist";
+import React from "react";
+import Profile from "./components/Profile";
+import FriendList from "./components/FriendList";
 import Statistics from "./components/Statistics";
 import user from './data/user.json';
 import data from './data/data.json';
+import friends from './data/friends.json'
+
+console.log(friends)
+console.log(data)
+console.log(user)
 
 function App() {
   return (
     <>
-      <FriendList 
+      <Profile 
         ueserName={user.username}
         tag={user.tag}
         location={user.location}
@@ -19,6 +26,12 @@ function App() {
         id={data.id}
         label={data.label}
         percentage={data.percentage}
+      />
+      <FriendList 
+        avatar={friends.avatar}
+        name={friends.name}
+        isOnline={friends.isOnline}
+        id={friends.id}
       />
     </>
   );

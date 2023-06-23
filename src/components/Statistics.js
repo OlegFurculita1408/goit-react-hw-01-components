@@ -1,29 +1,17 @@
-import data from '../data/data.json';
+
 
 function Statistics (props) {
     const { id, label, percentage, title="Upload stats" } = props;
-        <section key={id} class="statistics">
-            <h2 class="title">{title}</h2>
-            <ul class="stat-list">
-                <li class="item">
-                    <span class="label">{label}</span>
-                    <span class="percentage">{percentage}</span>
+        return (<section key={id} className="statistics">
+            <h2 className="title">{title}</h2>
+            <ul className="stat-list">
+                <li className="item">
+                    <span className="label">{label}</span>
+                    <span className="percentage">{percentage}</span>
                 </li>
             </ul>
         </section>
+        );
     }
-    export default Statistics;
 
-// const Statistics = data.map((props) => {
-//     const { id, label, percentage, title="Upload stats" } = props;
-//     <section class="statistics">
-//             <h2 class="title">{title}</h2>
-//             <ul class="stat-list">
-//                 <li class="item" key={id}>
-//                     <span class="label">{label}</span>
-//                     <span class="percentage">{percentage}</span>
-//                 </li>
-//             </ul>
-//         </section>
-// })
-// export default Statistics;
+export default Statistics;
