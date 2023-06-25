@@ -1,14 +1,12 @@
 import React from "react";
 import Profile from "./components/Profile";
-import FriendList from "./components/FriendList";
 import Statistics from "./components/Statistics";
+import Friendlist from "./components/Friendlist";
 import user from './data/user.json';
 import data from './data/data.json';
 import friends from './data/friends.json'
 
 console.log(friends)
-console.log(data)
-console.log(user)
 
 function App() {
   return (
@@ -23,15 +21,11 @@ function App() {
         likes={user.stats.likes}
       />
       <Statistics 
-        id={data.id}
-        label={data.label}
-        percentage={data.percentage}
+        title={'Upload stats'} 
+        data={data}
       />
-      <FriendList 
-        avatar={friends.avatar}
-        name={friends.name}
-        isOnline={friends.isOnline}
-        id={friends.id}
+      <Friendlist
+        friends={friends}
       />
     </>
   );

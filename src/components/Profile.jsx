@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function Profile(props) {
     const { ueserName, tag, location, iconsUser, folower, views, likes } = props;
     return (
@@ -13,7 +15,6 @@ function Profile(props) {
         <p className="tag">@{tag}</p>
         <p className="location">{location}</p>
       </div>
-  
       <ul className="stats">
         <li>
           <span className="label">Followers</span>
@@ -31,5 +32,14 @@ function Profile(props) {
     </div>
     );
   }
+  Profile.propTypes = {
+    ueserName: PropTypes.string,
+    tag: PropTypes.string,
+    location: PropTypes.string,
+    iconsUser: PropTypes.string,
+    folower: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  };
 
   export default Profile;
