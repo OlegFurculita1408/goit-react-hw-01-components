@@ -8,7 +8,7 @@ import data from './data/data.json';
 import friends from './data/friends.json';
 import history from './data/transactions.json';
 
-console.log(friends)
+console.log(history)
 
 function App() {
   return (
