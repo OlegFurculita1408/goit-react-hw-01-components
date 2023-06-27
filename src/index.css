@@ -11,6 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+li {
+  list-style: none;
+}
 .container{
   width: 800px;
   padding: 20px 20px 20px 20px;

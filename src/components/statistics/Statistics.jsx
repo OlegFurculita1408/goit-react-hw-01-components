@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { getRandomHexColor } from '../randomColor.js'
+import { getRandomHexColor } from '../../randomColor.js'
 
 
 function Statistics ({title='', data}) { 
