@@ -6,31 +6,33 @@ function Profile(props) {
     const { ueserName, tag, location, iconsUser, folower, views, likes } = props;
     return (
       <div className={style.profile}>
-      <div className="description">
-        <img
-          src={iconsUser}
-          width="280"
-          alt={ueserName}
-          className="avatar"
-        />
-        <p className="name">{ueserName}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
-      </div>
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{folower}</span>
+        <div className={style.description}>
+          <div className={style.avatarContainer}>
+          <img
+            src={iconsUser}
+            width="280"
+            alt={ueserName}
+            className={style.avatar}
+          />
+          </div>
+          <p className={style.name}>{ueserName}</p>
+          <p className={style.tag}>@{tag}</p>
+          <p className={style.location}>{location}</p>
+        </div>
+        <ul className={style.statsList}>
+          <li>
+            <span className="label">Followers</span>
+            <span className="quantity">{folower}</span>
+          </li>
+          <li>
+            <span className="label">Views</span>
+            <span className="quantity">{views}</span>
+          </li>
+          <li>
+            <span className="label">Likes</span>
+            <span className="quantity">{likes}</span>
         </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
-      </li>
-      </ul>
+        </ul>
     </div>
     );
   }

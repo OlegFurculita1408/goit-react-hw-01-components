@@ -1,16 +1,20 @@
 import PropTypes from 'prop-types';
 import { Frienditem } from './Frienditem';
+import css from './friends.module.css';
 
 function Friendlist({friends}) {
     return (
-        <ul className="friend-list">
-        {
-        friends.map(({ id, avatar, name, isOnline }) => (
-            <Frienditem key={id} avatar={avatar} name={name} isOnline={isOnline}/>
-           ))
+            <div className={css.container}>
+                <ul className={css.friendList}>
+                {
+                friends.map(({ id, avatar, name, isOnline }) => (
+                    <Frienditem key={id} avatar={avatar} name={name} isOnline={isOnline}/>
+                ))
+                }
+                </ul>
+            </div>
+            );
         }
-        </ul>);
-}
 Friendlist.propTypes = {
     friends: PropTypes.arrayOf(
             PropTypes.shape({
