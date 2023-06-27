@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
+import style from './styles/profile.module.css';
+
 
 function Profile(props) {
     const { ueserName, tag, location, iconsUser, folower, views, likes } = props;
     return (
-      <div className="profile">
+      <div className={style.profile}>
       <div className="description">
         <img
           src={iconsUser}
